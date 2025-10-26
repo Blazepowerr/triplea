@@ -5,3 +5,4 @@ public interface ApplicationContext {
   /** Returns the type containing the entry point from which the application was started. */
   Class<?> getMainClass();
 }
+//

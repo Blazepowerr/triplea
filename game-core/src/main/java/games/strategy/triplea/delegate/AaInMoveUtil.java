@@ -1,12 +1,7 @@
 package games.strategy.triplea.delegate;
 
 import com.google.common.collect.ImmutableList;
-import games.strategy.engine.data.GameData;
-import games.strategy.engine.data.GamePlayer;
-import games.strategy.engine.data.Route;
-import games.strategy.engine.data.Territory;
-import games.strategy.engine.data.Unit;
-import games.strategy.engine.data.UnitType;
+import games.strategy.engine.data.*;
 import games.strategy.engine.delegate.IDelegateBridge;
 import games.strategy.triplea.Properties;
 import games.strategy.triplea.attachments.TechAbilityAttachment;
@@ -17,19 +12,13 @@ import games.strategy.triplea.delegate.battle.casualty.AaCasualtySelector;
 import games.strategy.triplea.delegate.data.CasualtyDetails;
 import games.strategy.triplea.delegate.power.calculator.CombatValue;
 import games.strategy.triplea.formatter.MyFormatter;
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
-import java.util.concurrent.atomic.AtomicReference;
-import java.util.function.Predicate;
 import org.triplea.java.collections.CollectionUtils;
 import org.triplea.sound.SoundPath;
+
+import java.io.Serializable;
+import java.util.*;
+import java.util.concurrent.atomic.AtomicReference;
+import java.util.function.Predicate;
 
 /** Code to fire AA guns while in combat and non combat move. */
 class AaInMoveUtil implements Serializable {
